@@ -22,9 +22,12 @@ Before you can create your Lambda you need to create an execution role. If you d
 Run the create lambda script to create the Lambda via AWS Cli. This example creates a Lambda named "myLambda". From the project root dir run 
 `npm run create arn:aws:iam::YOUR_ACCOUNT_ID:role/lambda_basic_execution`
 
-### Test Your Lambda
+### Test Your Deployed Lambda
 Now that your lambda is live you can invoke it!
 `npm run invoke {\"type\": \"sweet\"}` or test the error state without a type `npm run invoke {}`
+
+### Test Your Lambda Locally
+You can "invoke" your lambda before you deploy it by running `npm run localInvoke`. This will invoke your Lambda using the mock event data in `provisioning/localEvent.json` and output the results in the console.
 
 ### Deploy changes
 After making some changes you'll probably want to deploy them...
