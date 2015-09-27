@@ -9,6 +9,7 @@
     "create": "./provisioning/awsCreate.sh myLambda",
     "deploy": "./provisioning/awsUpdate.sh myLambda",
     "invoke": "./provisioning/awsInvoke.sh myLambda",
+    "localInvoke": "node ./provisioning/localInvoke.js",
     "test": "jasmine",
     "test:watch": "watch jasmine ./"
   },
