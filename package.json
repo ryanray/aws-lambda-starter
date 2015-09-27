@@ -1,0 +1,22 @@
+{
+  "name": "aws-lambda-starter",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "main": "lambda.js",
+  "scripts": {
+    "build": "./build.sh",
+    "create": "./provisioning/awsCreate.sh myLambda",
+    "deploy": "./provisioning/awsUpdate.sh myLambda",
+    "invoke": "./provisioning/awsInvoke.sh myLambda",
+    "test": "jasmine",
+    "test:watch": "watch jasmine ./"
+  },
+  "author": "Ryan Ray <ryan@ryanray.me>",
+  "license": "Apache 2.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "proxyquire": "~1.7.2"
+  }
+}
