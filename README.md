@@ -7,13 +7,24 @@ NOTE: Tests get ran by default before you create or deploy your lambda. See buil
 ### Prerequisites
 1. [AWS CLI](https://aws.amazon.com/cli/)
 2. Execution Role ARN for your Lambda
-3. Create a `config.json` based on `config.sample.json`. This file is gitignored by default because this is where you would put any api key's and other secret info that your lambda may need.
 
 To run tests you'll want to install jasmine and watch globally
+
 `npm install -g jasmine watch`
 
 Then you can run tests while watching files for changes:
+
 `npm run test:watch`
+
+
+If you want to ignore the tests during builds/deploys you can comment out the `npm test` line in `build.sh`
+
+### Setup
+1. Clone repo `git clone https://github.com/ryanray/aws-lambda-starter your-project-name`
+1. Create `config.json` file based on `config.sample.json`. This file is gitignored by default because this is where you would put any api key's and other secret info that your lambda may need.
+1. Make sure you can run the tests `npm test`
+1. If you want to change the name of the lambda change `myLambda` in `package.json`
+
 
 ### Execution Role ARN(Amazon Resource Name)
 Before you can create your Lambda you need to create an execution role. If you did any of the Lambda hello world tutorials in the AWS console you should already have a role created. Either way you need to goto the AWS Console -> Security & Identity -> IAM -> Roles. Get the ARN of `lambda_basic_execution` or create a new role based on `role.example.json` and get the ARN from that. The full ARN looks something like `arn:aws:iam::YOUR_ACCOUNT_ID:role/lambda_basic_execution`.
