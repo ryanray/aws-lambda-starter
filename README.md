@@ -1,5 +1,5 @@
 # aws-lambda-starter
-Starting point for AWS Lambda projects - includes create, deploy, invoke scripts as well as unit tests! Unit tests are in Jasmine right now but switching over to mocha or something else would be trivial.
+Starting point / boilerplate for node.js based AWS Lambda projects - includes create, deploy, invoke scripts as well as unit tests! Unit tests are in Jasmine right now but switching over to mocha or something else would be trivial.
 
 ## Getting Started
 NOTE: Tests get ran by default before you create or deploy your lambda. See build.sh and the scripts in provisioning/. Also, all commands are run under the Lambda name `myLambda`. You can change the name in `package.json` - unfortunately you have to change it in 3 spots until TODO #1 gets done.
@@ -9,13 +9,10 @@ NOTE: Tests get ran by default before you create or deploy your lambda. See buil
 2. Execution Role ARN for your Lambda
 
 To run tests you'll want to install jasmine and watch globally
-
 `npm install -g jasmine watch`
 
 Then you can run tests while watching files for changes:
-
 `npm run test:watch`
-
 
 If you want to ignore the tests during builds/deploys you can comment out the `npm test` line in `build.sh`
 
